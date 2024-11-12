@@ -1,20 +1,18 @@
+from prueba import *
+
 def MenuDificultad(): #Menú de dificultad del juego
     print("############################")
     print("Bienvenida a Hundir la flota")
     print("############################")
-    dificultad = int(input(print("Por favor, seleccione el nivel de dificultad: ")))
-    return dificultad
+
+    dificultad = int(input("Dificultad: "))
+    if dificultad == 1:
+          print("\n--- Ordenador malvado D: ---\n")
+          tabla1_ordenador()
+          print("\n--- Tu ordenador :D ---\n")
+          tabla1()
+          
 
 
-def CrearTableroVacío(totalFilas,totalCol,valor):
-    matrizVacía = []
-    for fila in range(totalFilas):
-        matrizVacía.append([])
-        for columna in range(totalCol):
-            matrizVacía[fila].append(valor)
-    return matrizVacía
 
-def imprimirfilasMatriz(m):
-    for fila in m:
-        print(fila)
     
