@@ -1,10 +1,35 @@
 import random
 import string
 def posicionBarcos(tablero): #3 casillas horizontales
-    filarandom = random.randint(0,9)
-    colrandom = random.randint(0,9)
-    for i in range(filarandom,i+1):
-        tablero [filarandom][colrandom] = "B"
+    for i in range(3):
+        filarandom = random.randint(0,7)
+        colrandom = random.randint(0,7)   
+        for i in range(3):
+            tablero [filarandom][colrandom + i] = "B"
+
+def posicionPortaviones(tablero): #3 casillas horizontales
+    for i in range(2):
+        filarandom = random.randint(0,5)
+        colrandom = random.randint(0,5)   
+        for i in range(5):
+            tablero [filarandom + i][colrandom] = "P"
+
+def posicionAcorazados(tablero): #3 casillas horizontales
+    for i in range(2):
+        filarandom = random.randint(0,6)
+        colrandom = random.randint(0,6)   
+        for i in range(4):
+            tablero [filarandom + i][colrandom] = "Z"
+
+
+            
+          
+            
+
+
+
+
+
 '''def posicionAcorazados(tablero): #4 casillas verticales
    for i in range(0,5,):
        filarandom = random.randint(0,9)
@@ -31,4 +56,7 @@ def imprimir_tablero(tablero):
 tablero1 = crear_tablero()
 #imprimir_tablero(tablero1)
 posicionBarcos(tablero1)
+posicionPortaviones(tablero1)
+posicionAcorazados(tablero1)
 imprimir_tablero(tablero1)
+
